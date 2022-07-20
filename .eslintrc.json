@@ -1,3 +1,31 @@
 {
-  "extends": "next/core-web-vitals"
+  "env": {
+      "browser": true,
+      "es2022": true
+  },
+"setting": {
+  "react": {
+    "version": "detect"
+  }
+},
+  "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "plugin:prettier/recommended"
+  ],
+  "parserOpitions":{
+      "ecmaFeatures":{
+          "jsx":true,
+    "js": true
+      },
+      "ecmaVersion":12,
+      "sourceType": "module"
+  },
+  "rules": {
+    "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
+    "react/prop-type": "off",
+    "react/react-in-jsx-scop": "off"
+  }
+
 }
